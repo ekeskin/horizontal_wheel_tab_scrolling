@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Horizontal Wheel Tab Scrolling",
+  "description": "Scroll through tabs in a window using the horizontal wheel.",
+  "homepage_url": "https://github.com/ekeskin/horizontal_wheel_tab_scrolling",
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "horizontal_wheel_tab_scrolling@keskin.network",
+      "strict_min_version": "58.0a1"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self';",
+
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "match_about_blank": true,
+    "all_frames": true,
+    "run_at": "document_start",
+    "js": ["content.js"]
+  }],
+  "version": "1.0"
+}
