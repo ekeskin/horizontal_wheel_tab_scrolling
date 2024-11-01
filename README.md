@@ -2,7 +2,7 @@
 
 ## What it does
 
-This extension allows you to scroll through tabs in a window using the mouse wheel.
+This extension allows you to scroll through tabs in a window using the horizontal mouse wheel.
 
 Injects content.js into all tabs in a window, which intercepts the mouse wheel event and sends a message to the background.js file.
 
